@@ -1,12 +1,12 @@
 'use strict';
 
-var SearchResults = require('../../SearchResults/View/SearchResultsView');
+var SearchResultsComponent = require('../../SearchResults/Component/SearchResultsComponent');
 
 class SearchPageOutput {
   static goToNextModule(component, listings) {
     component.props.navigator.push({
       title: 'Results',
-      component: SearchResults,
+      component: SearchResultsComponent,
       passProps: {listings: listings}
     });
   }

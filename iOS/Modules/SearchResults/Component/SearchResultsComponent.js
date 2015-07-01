@@ -42,7 +42,7 @@ var styles = StyleSheet.create({
   }
 });
 
-class SearchResults extends Component {
+class SearchResultsComponent extends Component {
 
   constructor(props) {
     super(props);
@@ -92,4 +92,4 @@ class SearchResults extends Component {
 }
 
 
-module.exports = SearchResults;
+module.exports = SearchResultsComponent;

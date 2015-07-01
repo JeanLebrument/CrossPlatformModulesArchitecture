@@ -1,7 +1,7 @@
 'use strict';
 
 var React = require('react-native');
-var SearchPage = require('./iOS/Modules/SearchPage/View/SearchPageView');
+var SearchPageComponent = require('./iOS/Modules/SearchPage/Component/SearchPageComponent');
 
 var styles = React.StyleSheet.create({
   container: {
@@ -16,7 +16,7 @@ class PropertyFinderApp extends React.Component {
         style={styles.container}
         initialRoute={{
           title: 'Property Finder',
-          component: SearchPage,
+          component: SearchPageComponent,
         }}/>
     );
   }

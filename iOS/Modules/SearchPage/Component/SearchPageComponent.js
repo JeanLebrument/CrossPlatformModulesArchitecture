@@ -67,7 +67,7 @@ var styles = StyleSheet.create({
   }
 });
 
-class SearchPage extends Component {
+class SearchPageComponent  extends Component {
   constructor(props) {
     super(props);
 
@@ -161,4 +161,4 @@ class SearchPage extends Component {
   }
 }
 
-module.exports = SearchPage;
+module.exports = SearchPageComponent;
