@@ -1,6 +1,6 @@
 'use strict';
 
-var SearchResults = require('../../SearchResults/SearchResults');
+var SearchResults = require('../../SearchResults/View/SearchResultsView');
 
 class SearchPageOutput {
   static goToNextModule(component, listings) {

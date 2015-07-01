@@ -1,7 +1,6 @@
 'use strict';
 
 var React = require('react-native');
-var SearchResults = require('../../SearchResults/SearchResults');
 var SearchPageAction = require('../../../../Core/Modules/SearchPage/Action/SearchPageAction');
 var SearchPageStore = require('../../../../Core/Modules/SearchPage/Store/SearchPageStore');
 var SearchPageOutput = require('../Output/SearchPageOutput');
