@@ -47,6 +47,7 @@ class PropertyViewComponent extends Component {
   render() {
     var property = this.props.property;
     var stats = property.bedroom_number + ' bed ' + property.property_type;
+
     if (property.bathroom_number) {
       stats += ', ' + property.bathroom_number + ' ' + (property.bathroom_number > 1
         ? 'bathrooms' : 'bathroom');
