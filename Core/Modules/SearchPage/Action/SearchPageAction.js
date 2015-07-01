@@ -7,7 +7,6 @@ var SearchPageStore = require('../../../../Core/Modules/SearchPage/Store/SearchP
 
 class SearchPageAction {
   static _dispatchResult(results, error) {
-    console.log('_dispatchResult called');
     AppDispatcher.dispatch({
       eventName: SearchPageConstants.SEARCH_FOR_LOCATION,
       results: results,

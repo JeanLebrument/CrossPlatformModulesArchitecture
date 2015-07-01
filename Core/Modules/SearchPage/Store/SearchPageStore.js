@@ -29,15 +29,11 @@ class SearchPageStore extends EventEmitter {
   }
 
   addChangeListener(callback) {
-    console.log('addChangeListener before');
     this.on('change', callback);
-    console.log('addChangeListener after');
   }
 
   removeChangeListener(callback) {
-    console.log('removeChangeListener before');
     this.removeListener('change', callback);
-    console.log('removeChangeListener after');
   }
 }
 

@@ -79,43 +79,29 @@ class SearchPage extends Component {
     };
   }
 
-  setState(obj) {
-    console.log('setState before');
-    super.setState(obj);
-    console.log('setState after');
-  }
-
   resultsFounds() {
-    console.log('resultsFounds before');
     var results = SearchPageStore.getResults();
-    var resultError = SearchPageStore.getResultError();
-    var formatedLocation = results ? results.formatedLocation : '';
+    var formatedLocation = results && results.location ? results.location : '';
 
-    console.log('resultsFounds before SET STATE');
-
-    // console.log('Thread.currentThread().getId(): ' + Thread.currentThread().getId());
+    console.log('formatedLocation: ' + formatedLocation);
 
     this.setState({
       searchString: formatedLocation,
       isLoading: false,
-      resultError: ''
+      resultError: SearchPageStore.getResultError()
     });
 
-    //
-    // if (results && results.listings) {
-    //   SearchPageOutput.goToNextModule(this, results.listings)
-    // }
-    console.log('resultsFounds after');
+    if (results && results.listings &&
+      (this.state.resultError === '' || !this.state.resultError))
+      SearchPageOutput.goToNextModule(this, results.listings);
   }
 
   componentDidMount() {
-    console.log('componentDidMount');
-    SearchPageStore.addChangeListener(this.resultsFounds);
+    SearchPageStore.addChangeListener(this.resultsFounds.bind(this));
   }
 
   componentWillUnmount() {
-    console.log('componentWillUnmount');
-    SearchPageStore.removeChangeListener(this.resultsFounds);
+    SearchPageStore.removeChangeListener(this.resultsFounds.bind(this));
   }
 
   onSearchPressed() {

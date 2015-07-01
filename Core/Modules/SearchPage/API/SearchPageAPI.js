@@ -21,7 +21,7 @@ class SearchPageAPI {
   }
 
   static findResultsForLocation(location) {
-    return SearchPageAPI._executeQuery(SearchPageAPI._executeQuery('place_name', location, 1))
+    return SearchPageAPI._executeQuery(SearchPageAPI._formattingQuery('place_name', location, 1))
       .then(data => {
         return new Promise(function(resolve, reject) { resolve({ location: location, listings: data }); });
       }, error => {
