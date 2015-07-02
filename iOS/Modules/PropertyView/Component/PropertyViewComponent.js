@@ -42,7 +42,7 @@ var styles = StyleSheet.create({
   }
 });
 
-class PropertyViewComponent extends Component {
+class PropertyViewComponent extends React.Component {
 
   render() {
     var property = this.props.property;
