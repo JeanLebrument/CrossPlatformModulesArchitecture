@@ -1,3 +1,5 @@
+'use strict';
+
 var Dispatcher = require('flux').Dispatcher;
 
 class AppDispatcher extends Dispatcher {
